@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "id": 1,
+      "name": "Work"
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "title": "Note title",
+      "body": "Note body",
+      "folderId": "1"
+    }
+  ]
+}

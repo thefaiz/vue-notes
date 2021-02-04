@@ -1,23 +1,36 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Folders from '../views/Folders.vue'
+import Notes from '../views/Notes.vue'
+import EditNote from '../views/EditNote.vue'
+import CreateNote from '../views/CreateNote.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Folders',
+    component:Folders
   },
+
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/folders/:id',
+    name: 'Notes',
+    component: Notes
+  },
+
+  {
+    path: '/notes/:id',
+    name: 'EditNote',
+    component: EditNote
+  },
+
+  {
+    path: '/folders/:id/create',
+    name: 'CreateNote',
+    component: CreateNote
+  },
 ]
 
 const router = new VueRouter({
